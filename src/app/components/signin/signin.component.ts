@@ -22,7 +22,9 @@ this.user=UserService;
   }
   onSubmit(){
     console.log("form values",this.signInForm.value);
-    this.user.getgetUserInfo(this.signInForm.value);
+    this.user.getgetUserInfo(this.signInForm.value).subscribe((data:any)=>{
+      console.log("signin data",data);
+    });
 
   }
 }
