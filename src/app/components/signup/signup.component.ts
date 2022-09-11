@@ -21,6 +21,8 @@ export class SignupComponent implements OnInit {
   }
   onSubmit(){
    console.log( this.signUpForm.value);
-   this.user.signUpUser(this.signUpForm.value);
+   this.user.signUpUser(this.signUpForm.value).subscribe((data:any)=>{
+    console.log("signup data",data);
+  });;
     }
 }
